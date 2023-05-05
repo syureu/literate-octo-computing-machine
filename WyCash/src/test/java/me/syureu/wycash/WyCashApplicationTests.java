@@ -3,6 +3,8 @@ package me.syureu.wycash;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import me.syureu.wycash.entity.Dollar;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -23,7 +25,7 @@ class WyCashApplicationTests {
 	 * Money 반올림?
 	 *
 	 * 컴파일 에러
-	 * Dollar 클래스가 없음
+	 * <b>Dollar 클래스가 없음</b>
 	 * 생성자가 없음 (Dollar의 int 하나를 갖는)
 	 * times(int) 메서드가 없음
 	 * amount 필드가 없음
