@@ -25,8 +25,8 @@ class WyCashApplicationTests {
 	 * Money 반올림?
 	 *
 	 * 컴파일 에러
-	 * <b>Dollar 클래스가 없음</b>
-	 * 생성자가 없음 (Dollar의 int 하나를 갖는)
+	 * <del>Dollar 클래스가 없음</del>
+	 * <b>생성자가 없음 (Dollar의 int 하나를 갖는)</b>
 	 * times(int) 메서드가 없음
 	 * amount 필드가 없음
 	 */
