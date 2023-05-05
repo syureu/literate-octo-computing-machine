@@ -26,8 +26,8 @@ class WyCashApplicationTests {
 	 *
 	 * 컴파일 에러
 	 * <del>Dollar 클래스가 없음</del>
-	 * <b>생성자가 없음 (Dollar의 int 하나를 갖는)</b>
-	 * times(int) 메서드가 없음
+	 * <del>생성자가 없음 (Dollar의 int 하나를 갖는)</del>
+	 * <b>times(int) 메서드가 없음</b>
 	 * amount 필드가 없음
 	 */
 	@Test
