@@ -23,6 +23,8 @@ class WyCashApplicationTests {
 	 * <del>Dollar 부작용(side effect)?</del>
 	 * Money 반올림?
 	 * <del>equals()</del>
+	 * Equal null
+	 * Equal object
 	 * hashcode()
 	 */
 	@Test
