@@ -20,7 +20,7 @@ class WyCashApplicationTests {
 	 * $5 + 10CHF = $10(환율이 2:1일 경우)
 	 * <del>$5 X 2 = $10</del>
 	 * amount를 private으로 만들기
-	 * <b>Dollar 부작용(side effect)?</b>
+	 * <del>Dollar 부작용(side effect)?</del>
 	 * Money 반올림?
 	 */
 	@Test
