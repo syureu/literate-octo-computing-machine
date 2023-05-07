@@ -17,18 +17,11 @@ class WyCashApplicationTests {
 	/**
 	 * <b>어떤 금액(주가)을 어떤 수(주식의 수)에 곱한 금액을 결과로 얻을 수 있어야 한다.</b>
 	 *
-	 * 빨간 막대
 	 * $5 + 10CHF = $10(환율이 2:1일 경우)
-	 * <b>$5 X 2 = $10</b>
+	 * <del>$5 X 2 = $10</del>
 	 * amount를 private으로 만들기
 	 * Dollar 부작용(side effect)?
 	 * Money 반올림?
-	 *
-	 * 컴파일 에러
-	 * <del>Dollar 클래스가 없음</del>
-	 * <del>생성자가 없음 (Dollar의 int 하나를 갖는)</del>
-	 * <del>times(int) 메서드가 없음</del>
-	 * <del>amount 필드가 없음</del>
 	 */
 	@Test
 	public void testMultiplication() {
