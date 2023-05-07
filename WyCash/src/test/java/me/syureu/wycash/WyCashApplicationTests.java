@@ -22,7 +22,7 @@ class WyCashApplicationTests {
 	 * amount를 private으로 만들기
 	 * <del>Dollar 부작용(side effect)?</del>
 	 * Money 반올림?
-	 * equals()
+	 * <b>equals()</b>
 	 * hashcode()
 	 */
 	@Test
@@ -32,6 +32,11 @@ class WyCashApplicationTests {
 		assertEquals(10, product.amount);
 		product = five.times(3);
 		assertEquals(15, product.amount);
+	}
+
+	@Test
+	public void testEquality() {
+		assertTrue(new Dollar(5).equals(new Dollar(5)));
 	}
 
 }
