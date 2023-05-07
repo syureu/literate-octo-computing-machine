@@ -22,6 +22,8 @@ class WyCashApplicationTests {
 	 * amount를 private으로 만들기
 	 * <del>Dollar 부작용(side effect)?</del>
 	 * Money 반올림?
+	 * equals()
+	 * hashcode()
 	 */
 	@Test
 	public void testMultiplication() {
