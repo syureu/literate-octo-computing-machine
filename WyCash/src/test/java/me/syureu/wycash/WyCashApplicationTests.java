@@ -22,7 +22,7 @@ class WyCashApplicationTests {
 	 * amount를 private으로 만들기
 	 * <del>Dollar 부작용(side effect)?</del>
 	 * Money 반올림?
-	 * <b>equals()</b>
+	 * <del>equals()</del>
 	 * hashcode()
 	 */
 	@Test
