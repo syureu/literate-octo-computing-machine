@@ -19,7 +19,7 @@ class WyCashApplicationTests {
 	 *
 	 * $5 + 10CHF = $10(환율이 2:1일 경우)
 	 * <del>$5 X 2 = $10</del>
-	 * amount를 private으로 만들기
+	 * <b>amount를 private으로 만들기</b>
 	 * <del>Dollar 부작용(side effect)?</del>
 	 * Money 반올림?
 	 * <del>equals()</del>
@@ -30,10 +30,8 @@ class WyCashApplicationTests {
 	@Test
 	public void testMultiplication() {
 		Dollar five = new Dollar(5);
-		Dollar product = five.times(2);
-		assertEquals(10, product.amount);
-		product = five.times(3);
-		assertEquals(15, product.amount);
+		assertEquals(new Dollar(10), five.times(2));
+		assertEquals(new Dollar(15), five.times(3));
 	}
 
 	@Test
