@@ -29,8 +29,9 @@ class WyCashApplicationTests {
 	 * hashcode()
 	 * <del>5CHF * 2 = 10CHF</del>
 	 * Dollar/Franc 중복
-	 * <b>공용 equals</b>
+	 * <del>공용 equals</del>
 	 * 공용 times
+	 * Franc과 Dollar 비교하기
 	 */
 	@Test
 	public void testMultiplication() {
