@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import me.syureu.wycash.entity.Dollar;
+import me.syureu.wycash.entity.Franc;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,7 +27,10 @@ class WyCashApplicationTests {
 	 * Equal null
 	 * Equal object
 	 * hashcode()
-	 * <b>5CHF * 2 = 10CHF</b>
+	 * <del>5CHF * 2 = 10CHF</del>
+	 * Dollar/Franc 중복
+	 * 공용 equals
+	 * 공용 times
 	 */
 	@Test
 	public void testMultiplication() {
