@@ -5,7 +5,7 @@ public class Money {
 
 	@Override
 	public boolean equals(Object obj) {
-		return amount == ((Dollar)obj).amount;
+		return amount == ((Money)obj).amount;
 	}
 
 }
