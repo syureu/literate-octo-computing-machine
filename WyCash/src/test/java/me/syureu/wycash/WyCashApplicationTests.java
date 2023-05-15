@@ -26,6 +26,7 @@ class WyCashApplicationTests {
 	 * Equal null
 	 * Equal object
 	 * hashcode()
+	 * <b>5CHF * 2 = 10CHF</b>
 	 */
 	@Test
 	public void testMultiplication() {
