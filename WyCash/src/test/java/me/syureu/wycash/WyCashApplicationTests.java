@@ -29,7 +29,7 @@ class WyCashApplicationTests {
 	 * hashcode()
 	 * <del>5CHF * 2 = 10CHF</del>
 	 * Dollar/Franc 중복
-	 * 공용 equals
+	 * <b>공용 equals</b>
 	 * 공용 times
 	 */
 	@Test
