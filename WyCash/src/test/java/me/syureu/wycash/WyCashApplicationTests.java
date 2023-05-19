@@ -3,7 +3,6 @@ package me.syureu.wycash;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import me.syureu.wycash.entity.Franc;
 import me.syureu.wycash.entity.Money;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,19 +27,20 @@ class WyCashApplicationTests {
 	 * Equal object
 	 * hashcode()
 	 * <del>5CHF * 2 = 10CHF</del>
-	 * <b>Dollar/Franc 중복</b>
+	 * Dollar/Franc 중복 - times()
 	 * <del>공용 equals</del>
 	 * 공용 times
 	 * <del>Franc과 Dollar 비교하기</del>
 	 * 통화?
+	 * testFrancMultiplication을 지워야 할까?
 	 */
 	@Test
 	public void testEqualityDollarAndFranc() {
 		assertTrue(Money.dollar(5).equals(Money.dollar(5)));
 		assertFalse(Money.dollar(5).equals(Money.dollar(6)));
-		assertTrue(new Franc(5).equals(new Franc(5)));
-		assertFalse(new Franc(5).equals(new Franc(6)));
-		assertFalse(Money.dollar(5).equals(new Franc(5)));
+		assertTrue(Money.franc(5).equals(Money.franc(5)));
+		assertFalse(Money.franc(5).equals(Money.franc(6)));
+		assertFalse(Money.dollar(5).equals(Money.franc(5)));
 	}
 
 	@Test
@@ -58,15 +58,15 @@ class WyCashApplicationTests {
 
 	@Test
 	public void testFrancMultiplication() {
-		Franc five = new Franc(5);
-		assertEquals(new Franc(10), five.times(2));
-		assertEquals(new Franc(15), five.times(3));
+		Money five = Money.franc(5);
+		assertEquals(Money.franc(10), five.times(2));
+		assertEquals(Money.franc(15), five.times(3));
 	}
 
 	@Test
 	public void testFrancEquality() {
-		assertTrue(new Franc(5).equals(new Franc(5)));
-		assertFalse(new Franc(5).equals(new Franc(6)));
+		assertTrue(Money.franc(5).equals(Money.franc(5)));
+		assertFalse(Money.franc(5).equals(Money.franc(6)));
 	}
 
 }
