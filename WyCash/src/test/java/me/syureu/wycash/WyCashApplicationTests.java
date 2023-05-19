@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import me.syureu.wycash.entity.Dollar;
 import me.syureu.wycash.entity.Franc;
+import me.syureu.wycash.entity.Money;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -45,7 +46,7 @@ class WyCashApplicationTests {
 
 	@Test
 	public void testDollarMultiplication() {
-		Dollar five = new Dollar(5);
+		Dollar five = Money.dollar(5);
 		assertEquals(new Dollar(10), five.times(2));
 		assertEquals(new Dollar(15), five.times(3));
 	}
