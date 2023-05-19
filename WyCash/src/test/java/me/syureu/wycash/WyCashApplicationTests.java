@@ -31,7 +31,8 @@ class WyCashApplicationTests {
 	 * Dollar/Franc 중복
 	 * <del>공용 equals</del>
 	 * 공용 times
-	 * <b>Franc과 Dollar 비교하기</b>
+	 * <del>Franc과 Dollar 비교하기</del>
+	 * 통화?
 	 */
 	@Test
 	public void testEqualityDollarAndFranc() {
