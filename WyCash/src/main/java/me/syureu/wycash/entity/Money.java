@@ -3,7 +3,7 @@ package me.syureu.wycash.entity;
 public abstract class Money {
 	protected int amount;
 
-	public static Dollar dollar(int amount) {
+	public static Money dollar(int amount) {
 		return new Dollar(amount);
 	}
 
@@ -12,6 +12,6 @@ public abstract class Money {
 		return this.getClass().equals(obj.getClass()) && amount == ((Money)obj).amount;
 	}
 
-	abstract Money times(int multiplier);
+	public abstract Money times(int multiplier);
 
 }
