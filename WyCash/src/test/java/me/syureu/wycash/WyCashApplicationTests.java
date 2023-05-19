@@ -31,17 +31,26 @@ class WyCashApplicationTests {
 	 * Dollar/Franc 중복
 	 * <del>공용 equals</del>
 	 * 공용 times
-	 * Franc과 Dollar 비교하기
+	 * <b>Franc과 Dollar 비교하기</b>
 	 */
 	@Test
-	public void testMultiplication() {
+	public void testEqualityDollarAndFranc() {
+		assertTrue(new Dollar(5).equals(new Dollar(5)));
+		assertFalse(new Dollar(5).equals(new Dollar(6)));
+		assertTrue(new Franc(5).equals(new Franc(5)));
+		assertFalse(new Franc(5).equals(new Franc(6)));
+		assertFalse(new Dollar(5).equals(new Franc(5)));
+	}
+
+	@Test
+	public void testDollarMultiplication() {
 		Dollar five = new Dollar(5);
 		assertEquals(new Dollar(10), five.times(2));
 		assertEquals(new Dollar(15), five.times(3));
 	}
 
 	@Test
-	public void testEquality() {
+	public void testDollarEquality() {
 		assertTrue(new Dollar(5).equals(new Dollar(5)));
 		assertFalse(new Dollar(5).equals(new Dollar(6)));
 	}
