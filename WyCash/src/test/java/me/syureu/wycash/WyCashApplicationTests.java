@@ -28,7 +28,7 @@ class WyCashApplicationTests {
 	 * Equal object
 	 * hashcode()
 	 * <del>5CHF * 2 = 10CHF</del>
-	 * Dollar/Franc 중복
+	 * <b>Dollar/Franc 중복</b>
 	 * <del>공용 equals</del>
 	 * 공용 times
 	 * <del>Franc과 Dollar 비교하기</del>
