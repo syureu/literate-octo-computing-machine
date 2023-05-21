@@ -31,7 +31,7 @@ class WyCashApplicationTests {
 	 * <del>공용 equals</del>
 	 * 공용 times
 	 * <del>Franc과 Dollar 비교하기</del>
-	 * 통화?
+	 * <b>통화?</b>
 	 * testFrancMultiplication을 지워야 할까?
 	 */
 	@Test
@@ -67,6 +67,12 @@ class WyCashApplicationTests {
 	public void testFrancEquality() {
 		assertTrue(Money.franc(5).equals(Money.franc(5)));
 		assertFalse(Money.franc(5).equals(Money.franc(6)));
+	}
+
+	@Test
+	public void testCurrency() {
+		assertEquals("USD", Money.dollar(1).currency());
+		assertEquals("CHF", Money.franc(1).currency());
 	}
 
 }
