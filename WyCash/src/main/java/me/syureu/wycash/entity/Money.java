@@ -16,6 +16,8 @@ public abstract class Money {
 		return this.getClass().equals(obj.getClass()) && amount == ((Money)obj).amount;
 	}
 
+	public abstract String currency();
+
 	public abstract Money times(int multiplier);
 
 }
