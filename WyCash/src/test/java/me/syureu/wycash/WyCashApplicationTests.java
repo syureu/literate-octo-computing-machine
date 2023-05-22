@@ -31,7 +31,7 @@ class WyCashApplicationTests {
 	 * <del>공용 equals</del>
 	 * 공용 times
 	 * <del>Franc과 Dollar 비교하기</del>
-	 * <b>통화?</b>
+	 * <del>통화?</del>
 	 * testFrancMultiplication을 지워야 할까?
 	 */
 	@Test
