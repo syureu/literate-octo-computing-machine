@@ -29,7 +29,7 @@ class WyCashApplicationTests {
 	 * <del>5CHF * 2 = 10CHF</del>
 	 * Dollar/Franc 중복 - times()
 	 * <del>공용 equals</del>
-	 * 공용 times
+	 * <b>공용 times</b>
 	 * <del>Franc과 Dollar 비교하기</del>
 	 * <del>통화?</del>
 	 * testFrancMultiplication을 지워야 할까?
