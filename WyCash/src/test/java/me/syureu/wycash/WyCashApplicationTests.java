@@ -3,6 +3,7 @@ package me.syureu.wycash;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import me.syureu.wycash.entity.Franc;
 import me.syureu.wycash.entity.Money;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -73,6 +74,11 @@ class WyCashApplicationTests {
 	public void testCurrency() {
 		assertEquals("USD", Money.dollar(1).currency());
 		assertEquals("CHF", Money.franc(1).currency());
+	}
+
+	@Test
+	public void testDifferentClassEquality() {
+		assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
 	}
 
 }
