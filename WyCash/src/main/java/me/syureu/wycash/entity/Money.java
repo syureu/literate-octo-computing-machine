@@ -1,6 +1,6 @@
 package me.syureu.wycash.entity;
 
-public abstract class Money {
+public class Money {
 	protected int amount;
 	protected String currency;
 
@@ -24,8 +24,10 @@ public abstract class Money {
 
 	public String currency() {
 		return this.currency;
-	};
+	}
 
-	public abstract Money times(int multiplier);
+	public Money times(int multiplier) {
+		return null;
+	}
 
 }
