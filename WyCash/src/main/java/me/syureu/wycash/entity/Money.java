@@ -22,6 +22,13 @@ public class Money {
 		return this.getClass().equals(obj.getClass()) && amount == ((Money)obj).amount;
 	}
 
+	@Override public String toString() {
+		return "Money{" +
+			"amount=" + amount +
+			", currency='" + currency + '\'' +
+			'}';
+	}
+
 	public String currency() {
 		return this.currency;
 	}
