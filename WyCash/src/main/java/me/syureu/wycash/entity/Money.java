@@ -19,7 +19,7 @@ public class Money {
 
 	@Override
 	public boolean equals(Object obj) {
-		return this.getClass().equals(obj.getClass()) && amount == ((Money)obj).amount;
+		return amount == ((Money)obj).amount && currency().equals(((Money)obj).currency());
 	}
 
 	@Override public String toString() {
