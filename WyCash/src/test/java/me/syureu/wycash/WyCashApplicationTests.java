@@ -18,6 +18,7 @@ class WyCashApplicationTests {
 	 * <b>어떤 금액(주가)을 어떤 수(주식의 수)에 곱한 금액을 결과로 얻을 수 있어야 한다.</b>
 	 *
 	 * $5 + 10CHF = $10(환율이 2:1일 경우)
+	 * * <b>$5 + $5 = $10</b>
 	 * <del>$5 X 2 = $10</del>
 	 * <del>amount를 private으로 만들기</del>
 	 * <del>Dollar 부작용(side effect)?</del>
@@ -65,6 +66,12 @@ class WyCashApplicationTests {
 	public void testCurrency() {
 		assertEquals("USD", Money.dollar(1).currency());
 		assertEquals("CHF", Money.franc(1).currency());
+	}
+
+	@Test
+	public void testSimpleAddition() {
+		Money sum = Money.dollar(5).plus(Money.dollar(5));
+		assertEquals(Money.dollar(10), sum);
 	}
 
 }
