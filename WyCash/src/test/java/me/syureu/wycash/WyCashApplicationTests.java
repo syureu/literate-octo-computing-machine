@@ -27,7 +27,7 @@ class WyCashApplicationTests {
 	 * Equal object
 	 * hashcode()
 	 * <del>5CHF * 2 = 10CHF</del>
-	 * <b>Dollar/Franc 중복</b>
+	 * <del>Dollar/Franc 중복</del>
 	 * <del>공용 equals</del>
 	 * <del>공용 times</del>
 	 * <del>Franc과 Dollar 비교하기</del>
@@ -35,11 +35,9 @@ class WyCashApplicationTests {
 	 * testFrancMultiplication을 지워야 할까?
 	 */
 	@Test
-	public void testEqualityDollarAndFranc() {
+	public void testEquality() {
 		assertTrue(Money.dollar(5).equals(Money.dollar(5)));
 		assertFalse(Money.dollar(5).equals(Money.dollar(6)));
-		assertTrue(Money.franc(5).equals(Money.franc(5)));
-		assertFalse(Money.franc(5).equals(Money.franc(6)));
 		assertFalse(Money.dollar(5).equals(Money.franc(5)));
 	}
 
@@ -48,12 +46,6 @@ class WyCashApplicationTests {
 		Money five = Money.dollar(5);
 		assertEquals(Money.dollar(10), five.times(2));
 		assertEquals(Money.dollar(15), five.times(3));
-	}
-
-	@Test
-	public void testDollarEquality() {
-		assertTrue(Money.dollar(5).equals(Money.dollar(5)));
-		assertFalse(Money.dollar(5).equals(Money.dollar(6)));
 	}
 
 	@Test
@@ -73,11 +65,6 @@ class WyCashApplicationTests {
 	public void testCurrency() {
 		assertEquals("USD", Money.dollar(1).currency());
 		assertEquals("CHF", Money.franc(1).currency());
-	}
-
-	@Test
-	public void testDifferentClassEquality() {
-		assertTrue(new Money(10, "CHF").equals(new Money(10, "CHF")));
 	}
 
 }
