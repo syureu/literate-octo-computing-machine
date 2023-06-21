@@ -3,6 +3,7 @@ package me.syureu.wycash;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import me.syureu.wycash.entity.Bank;
 import me.syureu.wycash.entity.Expression;
 import me.syureu.wycash.entity.Money;
 
