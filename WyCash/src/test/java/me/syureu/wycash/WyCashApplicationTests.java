@@ -71,6 +71,7 @@ class WyCashApplicationTests {
 	@Test
 	void testSimpleAddition() {
 		...
+		Money reduced = bank.reduce(sum, "USD");
 		assertEquals(Money.dollar(10), reduced);
 	}
 
