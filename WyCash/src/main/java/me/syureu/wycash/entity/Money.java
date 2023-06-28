@@ -22,7 +22,8 @@ public class Money implements Expression {
 		return amount == ((Money)obj).amount && currency().equals(((Money)obj).currency());
 	}
 
-	@Override public String toString() {
+	@Override
+	public String toString() {
 		return "Money{" +
 			"amount=" + amount +
 			", currency='" + currency + '\'' +
@@ -41,4 +42,8 @@ public class Money implements Expression {
 		return new Sum(this, addend);
 	}
 
+	@Override
+	public Money reduce(String to) {
+		return this;
+	}
 }
