@@ -1,6 +1,6 @@
 package me.syureu.wycash.entity;
 
-public class Money implements Expression{
+public class Money implements Expression {
 	protected int amount;
 	protected String currency;
 
@@ -38,7 +38,7 @@ public class Money implements Expression{
 	}
 
 	public Expression plus(Money addend) {
-		return new Money(amount + addend.amount, currency);
+		return new Sum(this, addend);
 	}
 
 }

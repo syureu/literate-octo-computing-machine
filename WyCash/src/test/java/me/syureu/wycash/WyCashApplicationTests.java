@@ -85,7 +85,7 @@ class WyCashApplicationTests {
 	void testPlusReturnSum() {
 		Money five = Money.dollar(5);
 		Expression result = five.plus(five);
-		Sum sum = (Sum) result;
+		Sum sum = (Sum)result;
 		assertEquals(five, sum.augend);
 		assertEquals(five, sum.addend);
 	}
