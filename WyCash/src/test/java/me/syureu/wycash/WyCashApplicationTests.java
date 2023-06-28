@@ -23,6 +23,7 @@ class WyCashApplicationTests {
 	 * $5 + 10CHF = $10(환율이 2:1일 경우)
 	 * * <b>$5 + $5 = $10</b>
 	 * * $5 + $5에서 Money 반환하기
+	 * * Bank.reduce(Money)
 	 * <del>$5 X 2 = $10</del>
 	 * <del>amount를 private으로 만들기</del>
 	 * <del>Dollar 부작용(side effect)?</del>
@@ -96,6 +97,13 @@ class WyCashApplicationTests {
 		Bank bank = new Bank();
 		Money result = bank.reduce(sum, "USD");
 		assertEquals(Money.dollar(7), result);
+	}
+
+	@Test
+	void testReduceMoney() {
+		Bank bank = new Bank();
+		Money result = bank.reduce(Money.dollar(1), "USD");
+		assertEquals(Money.dollar(1), result);
 	}
 
 }
