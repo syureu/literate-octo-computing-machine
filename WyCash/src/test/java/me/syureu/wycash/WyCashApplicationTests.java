@@ -26,7 +26,7 @@ class WyCashApplicationTests {
      * <del>Bank.reduce(Money)</del>
      * <del>Money에 대한 통화 변환을 수행하는 Reduce</del>
      * <del>Reduce(Bank, String)</del>
-     * <b>Sum.plus</b>
+     * <del>Sum.plus</del>
      * Expression.times
      * <del>$5 X 2 = $10</del>
      * <del>amount를 private으로 만들기</del>
