@@ -26,7 +26,7 @@ class WyCashApplicationTests {
      * <del>Bank.reduce(Money)</del>
      * <del>Money에 대한 통화 변환을 수행하는 Reduce</del>
      * <del>Reduce(Bank, String)</del>
-     * Sum.plus
+     * <b>Sum.plus</b>
      * Expression.times
      * <del>$5 X 2 = $10</del>
      * <del>amount를 private으로 만들기</del>
@@ -131,5 +131,16 @@ class WyCashApplicationTests {
         bank.addRate("CHF", "USD", 2);
         Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
         assertEquals(Money.dollar(10), result);
+    }
+
+    @Test
+    void testSumPlusMoney() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Expression sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+        Money result = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(15), result);
     }
 }
