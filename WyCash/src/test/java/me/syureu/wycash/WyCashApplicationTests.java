@@ -20,7 +20,7 @@ class WyCashApplicationTests {
     /**
      * <b>어떤 금액(주가)을 어떤 수(주식의 수)에 곱한 금액을 결과로 얻을 수 있어야 한다.</b>
      * <p>
-     * $5 + 10CHF = $10(환율이 2:1일 경우)
+     * <b>$5 + 10CHF = $10(환율이 2:1일 경우)</b>
      * * <del>$5 + $5 = $10</b>
      * * $5 + $5에서 Money 반환하기
      * * <del>Bank.reduce(Money)</del>
@@ -119,5 +119,15 @@ class WyCashApplicationTests {
     @Test
     void testIdentityRate() {
         assertEquals(1, new Bank().rate("USD", "USD"));
+    }
+
+    @Test
+    void testMixedAddition() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+        assertEquals(Money.dollar(10), result);
     }
 }
